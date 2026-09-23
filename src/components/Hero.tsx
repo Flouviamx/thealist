@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full px-4 overflow-hidden bg-[#080407]">
+    <section className="relative h-[100dvh] w-full px-4 overflow-hidden bg-[#080407]">
       {/* Subtle radial glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-brand/15 rounded-full blur-[180px]" />
@@ -28,18 +28,36 @@ export default function Hero() {
       {/* Massive anchored text matching the IntroOverlay EXACTLY */}
       <div
         ref={textRef}
-        className="absolute bottom-0 left-0 w-full px-4 pb-6 md:px-8 md:pb-10 z-10 flex flex-col justify-end pointer-events-none"
+        className="absolute bottom-0 left-0 w-full px-4 pb-12 md:px-8 md:pb-10 z-10 flex flex-col justify-end pointer-events-none"
       >
-        <h1
-          className="font-serif text-white tracking-tighter w-full whitespace-nowrap"
-          style={{ fontSize: "17vw", lineHeight: 0.8 }}
-        >
-          <div className="overflow-hidden pt-[6vw] -mt-[6vw] pb-[3vw] -mb-[3vw] px-[4vw] -mx-[4vw]">
-            <span className="block text-left">where cool</span>
+        <h1 className="font-serif text-white tracking-tighter w-full">
+          
+          {/* DESKTOP LAYOUT */}
+          <div className="hidden md:block whitespace-nowrap" style={{ fontSize: "17vw", lineHeight: 0.8 }}>
+            <div className="overflow-hidden pt-[6vw] -mt-[6vw] pb-[3vw] -mb-[3vw] px-[4vw] -mx-[4vw]">
+              <span className="block text-left">where cool</span>
+            </div>
+            <div className="overflow-hidden pt-[6vw] -mt-[6vw] pb-[10vw] -mb-[10vw] px-[4vw] -mx-[4vw]">
+              <span className="block text-right italic text-[#D8C8D2]">people meet</span>
+            </div>
           </div>
-          <div className="overflow-hidden pt-[6vw] -mt-[6vw] pb-[10vw] -mb-[10vw] px-[4vw] -mx-[4vw]">
-            <span className="block text-right italic text-[#D8C8D2]">people meet</span>
+
+          {/* MOBILE LAYOUT (4 Lines, Massive Brutalism) */}
+          <div className="block md:hidden whitespace-nowrap" style={{ fontSize: "31vw", lineHeight: 0.85 }}>
+            <div className="overflow-hidden pt-[6vw] -mt-[6vw] pb-[2vw] -mb-[2vw] px-[4vw] -mx-[4vw]">
+              <span className="block text-left">where</span>
+            </div>
+            <div className="overflow-hidden pt-[4vw] -mt-[4vw] pb-[2vw] -mb-[2vw] px-[4vw] -mx-[4vw]">
+              <span className="block text-right">cool</span>
+            </div>
+            <div className="overflow-hidden pt-[4vw] -mt-[4vw] pb-[2vw] -mb-[2vw] px-[4vw] -mx-[4vw]">
+              <span className="block text-left italic text-[#D8C8D2]">people</span>
+            </div>
+            <div className="overflow-hidden pt-[4vw] -mt-[4vw] pb-[12vw] -mb-[12vw] px-[4vw] -mx-[4vw]">
+              <span className="block text-right italic text-[#D8C8D2]">meet</span>
+            </div>
           </div>
+
         </h1>
       </div>
     </section>
