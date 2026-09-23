@@ -3,25 +3,43 @@ import Invitation3D from "./Invitation3D";
 
 export default function AboutSection() {
   return (
-    <section id="comunidad" className="py-32 px-4 md:px-12 max-w-7xl mx-auto">
-      <div className="grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <h2 className="fade-up font-serif text-4xl md:text-6xl mb-8 text-white">Bienvenido a <br/><span className="italic">The A List</span></h2>
-          <p className="fade-up text-white/60 text-lg leading-relaxed mb-8 font-light">
+    <section id="comunidad" className="py-32 px-4 md:px-12 max-w-7xl mx-auto overflow-hidden">
+      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        
+        {/* Left: Text Content */}
+        <div className="relative z-10">
+          <div className="fade-up text-white/40 font-sans text-xs tracking-[0.3em] uppercase mb-8 flex items-center gap-4">
+            <span className="w-8 h-px bg-white/20"></span> El Concepto
+          </div>
+          
+          <h2 className="fade-up font-serif text-5xl md:text-7xl lg:text-[6rem] leading-[1.1] tracking-tighter text-white mb-12">
+            Bienvenido a <br/>
+            <span className="italic">The A List</span>
+          </h2>
+          
+          <p className="fade-up text-white/50 text-xl md:text-2xl font-light leading-[1.6] mb-16 pl-6 border-l border-white/10">
             Organizamos eventos privados exclusivos diseñados para fomentar conexiones genuinas. Tu pase de acceso a las mejores experiencias, networking y wellness en el corazón de la Ciudad de México.
           </p>
-          <div className="fade-up grid grid-cols-2 gap-4 mt-12">
+          
+          <div className="fade-up flex flex-wrap gap-3 md:gap-4">
             {['Amigos', 'Citas', 'Experiencias', 'Networking', 'Música', 'Wellness'].map((item) => (
-              <div key={item} className="flex items-center gap-3 text-sm text-white/60 uppercase tracking-widest">
-                <div className="w-1.5 h-1.5 bg-brand-light rounded-full shadow-[0_0_10px_rgba(106,58,93,0.8)]" /> 
+              <div 
+                key={item} 
+                className="px-5 py-2.5 rounded-full border border-white/10 text-[10px] sm:text-xs text-white/60 uppercase tracking-[0.2em] hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-default"
+              >
                 {item}
               </div>
             ))}
           </div>
         </div>
+
+        {/* Right: 3D Invitation */}
         <div className="fade-up relative h-[600px] md:h-[800px] w-full flex items-center justify-center">
+          {/* Subtle glow behind the card */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-brand/10 blur-[100px] rounded-full pointer-events-none" />
           <Invitation3D />
         </div>
+        
       </div>
     </section>
   );
