@@ -66,7 +66,7 @@ export default function CareersSection() {
 
             {/* Right: Tag & Arrow */}
             <div className="flex items-center justify-between lg:justify-end gap-6 lg:col-span-3 min-w-0 mt-4 lg:mt-0">
-              <div className="text-white/40 text-[10px] sm:text-xs uppercase tracking-[0.2em] font-medium border border-white/10 px-5 py-2.5 rounded-full group-hover:border-white/30 group-hover:text-white/80 transition-colors duration-500 whitespace-nowrap">
+              <div className="text-white/40 text-[10px] sm:text-xs uppercase tracking-[0.2em] font-medium border border-white/10 px-5 py-2.5 rounded-sm group-hover:border-white/30 group-hover:text-white/80 transition-colors duration-500 whitespace-nowrap">
                 {job.tag}
               </div>
               <div className="w-12 h-12 flex-shrink-0 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white transition-all duration-500">

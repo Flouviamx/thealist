@@ -21,7 +21,7 @@ export default function AboutSection() {
             {['Amigos', 'Citas', 'Experiencias', 'Networking', 'Música', 'Wellness'].map((item) => (
               <div 
                 key={item} 
-                className="px-5 py-2.5 rounded-full border border-white/10 text-[10px] sm:text-xs text-white/60 uppercase tracking-[0.2em] hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-default"
+                className="px-5 py-2.5 rounded-sm border border-white/10 text-[10px] sm:text-xs text-white/60 uppercase tracking-[0.2em] hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-default"
               >
                 {item}
               </div>
