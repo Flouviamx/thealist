@@ -52,7 +52,7 @@ export default function CareersSection() {
               <span className="font-serif italic text-white/20 text-xl md:text-2xl group-hover:text-brand-light transition-colors duration-500 flex-shrink-0">
                 0{i + 1}
               </span>
-              <h3 className="text-4xl md:text-5xl font-serif text-white group-hover:italic transition-all duration-300 tracking-tight break-words">
+              <h3 className="text-4xl md:text-5xl font-serif text-white transition-all duration-300 tracking-tight break-words">
                 {job.title}
               </h3>
             </div>
