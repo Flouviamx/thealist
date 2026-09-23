@@ -167,8 +167,22 @@ const InteractiveNapkin = () => {
   });
 
   const aspect = 1080 / 1440; 
-  const width = Math.min(viewport.width * 0.85, 4.8);
-  const height = width / aspect;
+  
+  // Calculate size to perfectly 'contain' the image within the viewport without cropping
+  let width = viewport.width * 0.85;
+  let height = width / aspect;
+
+  // If the calculated height exceeds the viewport height, constrain by height instead
+  if (height > viewport.height * 0.85) {
+    height = viewport.height * 0.85;
+    width = height * aspect;
+  }
+  
+  // Add an absolute maximum cap for extremely large desktop monitors
+  if (width > 4.8) {
+    width = 4.8;
+    height = width / aspect;
+  }
 
   return (
     <mesh ref={meshRef}>
