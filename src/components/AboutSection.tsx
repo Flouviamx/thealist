@@ -8,10 +8,6 @@ export default function AboutSection() {
         
         {/* Left: Text Content */}
         <div className="relative z-10">
-          <div className="fade-up text-white/40 font-sans text-xs tracking-[0.3em] uppercase mb-8 flex items-center gap-4">
-            <span className="w-8 h-px bg-white/20"></span> El Concepto
-          </div>
-          
           <h2 className="fade-up font-serif text-5xl md:text-7xl lg:text-[6rem] leading-[1.1] tracking-tighter text-white mb-12">
             Bienvenido a <br/>
             <span className="italic">The A List</span>
