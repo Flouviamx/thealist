@@ -36,8 +36,8 @@ export default function Footer() {
         </div>
 
         {/* Middle Row Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-12 border-b border-white/5">
-          <div className="md:col-span-1 pr-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 py-12 border-b border-white/5">
+          <div className="sm:col-span-2 md:col-span-1 pr-0 md:pr-8">
             <p className="mb-6 leading-relaxed">
               Únete a nuestra lista para recibir invitaciones exclusivas a eventos y actualizaciones de nuestra comunidad.
             </p>
