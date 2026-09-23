@@ -28,11 +28,8 @@ export default function CareersSection() {
       {/* Editorial 2-Column Header */}
       <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 md:mb-32 fade-up gap-12 lg:gap-8">
         <div>
-          <div className="text-white/50 font-sans text-xs tracking-[0.2em] uppercase mb-8 font-medium">
-            (Únete Al Equipo)
-          </div>
-          <h2 className="font-serif text-6xl md:text-[8rem] leading-none tracking-tighter text-white">
-            Vacantes<span className="text-brand-light italic">.</span>
+          <h2 className="font-serif text-6xl md:text-7xl lg:text-[7rem] leading-[1.1] tracking-tighter text-white">
+            Únete al equipo
           </h2>
         </div>
         
